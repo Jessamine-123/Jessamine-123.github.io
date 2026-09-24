@@ -118,9 +118,8 @@
    $small                      : 600px !default;
    $medium                     : 768px !default;
    $medium-wide                : 900px !default;
-   // Keep the compact, stacked profile layout on laptop-sized viewports.
-   // The previous 925px breakpoint activated the narrow desktop sidebar too early.
-   $large                      : 1200px !default;
+   // Switch to the sidebar layout on laptop-sized viewports.
+   $large                      : 925px !default;
    $x-large                    : 1280px !default;
    
    /*
@@ -138,7 +137,8 @@
      math: fluid,
      output: float,
      gutter-position: after,
-     container: $large,
+     // Keep the content area wide without tying it to the layout breakpoint.
+     container: 1200px,
      global-box-sizing: border-box,
      // debug: (
      //   image: show,
